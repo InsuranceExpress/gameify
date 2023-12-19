@@ -2,7 +2,9 @@
     <div v-if="ready" class="ticker-container">
       <div class="ticker-content">
         <div v-for="(agent, index) in combinedLeaderboard" :key="index" class="ticker-item">
-          <img src="../assets/images/playerLogo.jpg" alt="Player Logo" class="ticker-img mx-4">
+          <div class="w-[50px] h-[50px] rounded-full ticker-img relative">
+            <img src="../assets/images/playerLogo.jpg" alt="Player Logo" class="mx-4 h-[50px] w-[50px] object-cover rounded-full">
+          </div>
           <strong class="ticker-name">{{ agent.name }}</strong>
           <strong class="ticker-score mr-4">{{ agent.score }}</strong>
         </div>
@@ -236,8 +238,7 @@ export default {
 .ticker-img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .ticker-name, .ticker-score {
