@@ -57,12 +57,14 @@
         </div>
       </div>
     </div>
+    <BottomScroll/>
   </div>
 </template>
 
 <script>
 import moment from 'moment';
 import { Icon } from '@iconify/vue';
+import BottomScroll from '../components/bottomScroll.vue';
 
 export default {
   name: "Home",
@@ -251,7 +253,8 @@ export default {
     }
   },
   components: {
-    Icon
+    Icon,
+    BottomScroll,
   }
 }
 </script>
